@@ -1,0 +1,25 @@
+{
+  "manifest_version": 3,
+  "name": "X Reply Name Grabber",
+  "version": "1.0",
+  "description": "Xでリプライする際に相手の名前を取得して挨拶をクリップボードにコピーします。",
+  "permissions": [
+    "clipboardWrite",
+    "storage"
+  ],
+  "options_ui": {
+    "page": "options.html",
+    "open_in_tab": false
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*.twitter.com/*",
+        "*://*.x.com/*"
+      ],
+      "js": [
+        "content.js"
+      ]
+    }
+  ]
+}
