@@ -1,6 +1,6 @@
-document.addEventListener('keydown', (e) => {
-  // Option + N (Mac) or Alt + N (Windows)
-  if (e.altKey && e.code === 'KeyN') {
+// background.js から「ショートカットが押されたよ」というメッセージを受け取ったら処理を開始する
+chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
+  if (request.action === 'DO_COPY_NAME') {
     let name = "〇〇"; // デフォルト
 
     // ダイアログ（リプライ画面）内のツイートから名前を取得する試み

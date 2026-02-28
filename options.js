@@ -16,6 +16,11 @@ document.getElementById('save').addEventListener('click', () => {
   });
 });
 
+// ショートカット設定画面を新しいタブで開く処理
+document.getElementById('open-shortcuts').addEventListener('click', () => {
+  chrome.tabs.create({ url: 'chrome://extensions/shortcuts' });
+});
+
 // ページ読み込み時に保存されている設定を復元する
 document.addEventListener('DOMContentLoaded', () => {
   chrome.storage.sync.get({

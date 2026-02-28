@@ -11,6 +11,18 @@
     "page": "options.html",
     "open_in_tab": false
   },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "commands": {
+    "copy-name": {
+      "suggested_key": {
+        "default": "Alt+N",
+        "mac": "Alt+N"
+      },
+      "description": "Xのリプライ相手の名前を取得してコピー（ブラウザ拡張機能設定から変更可能）"
+    }
+  },
   "content_scripts": [
     {
       "matches": [
